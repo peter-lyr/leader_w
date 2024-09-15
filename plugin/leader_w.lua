@@ -14,4 +14,10 @@ require 'which-key'.add {
   { '<leader>wsk', '<c-w>s<c-w>k',                    desc = 'window.split up',    mode = { 'n', 'v', }, },
   { '<leader>wsh', '<c-w>v<c-w>h',                    desc = 'window.split left',  mode = { 'n', 'v', }, },
   { '<leader>wsl', '<c-w>v',                          desc = 'window.split right', mode = { 'n', 'v', }, },
+
+  { '<leader>wn',  group = 'window.new', },
+  { '<leader>wnj', ':<c-u>new<cr>',                   desc = 'window.new down',    mode = { 'n', 'v', }, },
+  { '<leader>wnk', ':<c-u>leftabove new<cr>',         desc = 'window.new up',      mode = { 'n', 'v', }, },
+  { '<leader>wnh', ':<c-u>leftabove vnew<cr>',        desc = 'window.new left',    mode = { 'n', 'v', }, },
+  { '<leader>wnl', ':<c-u>vnew<cr>',                  desc = 'window.new right',   mode = { 'n', 'v', }, },
 }
