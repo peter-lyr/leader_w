@@ -20,4 +20,8 @@ require 'which-key'.register {
   ['<leader>wnk'] = { ':<c-u>leftabove new<cr>', 'window.new up', mode = { 'n', 'v', }, },
   ['<leader>wnh'] = { ':<c-u>leftabove vnew<cr>', 'window.new left', mode = { 'n', 'v', }, },
   ['<leader>wnl'] = { ':<c-u>vnew<cr>', 'window.new right', mode = { 'n', 'v', }, },
+
+  ['<leader>we'] = { '<c-w>=', 'window equal', mode = { 'n', 'v', }, },
+  ['<leader>wm'] = { function() F.win_max_height() end, 'window max height', mode = { 'n', 'v', }, },
+  ['<leader>w,'] = { function() F.win_max_width() end, 'window max width', mode = { 'n', 'v', }, },
 }
