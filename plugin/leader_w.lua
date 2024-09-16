@@ -1,23 +1,23 @@
 local F = require 'f'
 
-require 'which-key'.add {
-  { '<leader>w',   group = 'window', },
-  { '<leader>wj',  function() vim.cmd 'wincmd j' end, desc = 'window go down',     mode = { 'n', 'v', }, },
-  { '<leader>wk',  function() vim.cmd 'wincmd k' end, desc = 'window go up',       mode = { 'n', 'v', }, },
-  { '<leader>wh',  function() vim.cmd 'wincmd h' end, desc = 'window go left',     mode = { 'n', 'v', }, },
-  { '<leader>wl',  function() vim.cmd 'wincmd l' end, desc = 'window go right',    mode = { 'n', 'v', }, },
+require 'which-key'.register {
+  ['<leader>w'] = { name = 'window', },
+  ['<leader>wj'] = { function() vim.cmd 'wincmd j' end, 'window go down', mode = { 'n', 'v', }, },
+  ['<leader>wk'] = { function() vim.cmd 'wincmd k' end, 'window go up', mode = { 'n', 'v', }, },
+  ['<leader>wh'] = { function() vim.cmd 'wincmd h' end, 'window go left', mode = { 'n', 'v', }, },
+  ['<leader>wl'] = { function() vim.cmd 'wincmd l' end, 'window go right', mode = { 'n', 'v', }, },
 
-  { '<leader>wd',  function() F.window_delete() end,  desc = 'window delete cur',  mode = { 'n', 'v', }, },
+  ['<leader>wd'] = { function() F.window_delete() end, 'window delete cur', mode = { 'n', 'v', }, },
 
-  { '<leader>ws',  group = 'window.split', },
-  { '<leader>wsj', '<c-w>s',                          desc = 'window.split down',  mode = { 'n', 'v', }, },
-  { '<leader>wsk', '<c-w>s<c-w>k',                    desc = 'window.split up',    mode = { 'n', 'v', }, },
-  { '<leader>wsh', '<c-w>v<c-w>h',                    desc = 'window.split left',  mode = { 'n', 'v', }, },
-  { '<leader>wsl', '<c-w>v',                          desc = 'window.split right', mode = { 'n', 'v', }, },
+  ['<leader>ws'] = { name = 'window.split', },
+  ['<leader>wsj'] = { '<c-w>s', 'window.split down', mode = { 'n', 'v', }, },
+  ['<leader>wsk'] = { '<c-w>s<c-w>k', 'window.split up', mode = { 'n', 'v', }, },
+  ['<leader>wsh'] = { '<c-w>v<c-w>h', 'window.split left', mode = { 'n', 'v', }, },
+  ['<leader>wsl'] = { '<c-w>v', 'window.split right', mode = { 'n', 'v', }, },
 
-  { '<leader>wn',  group = 'window.new', },
-  { '<leader>wnj', ':<c-u>new<cr>',                   desc = 'window.new down',    mode = { 'n', 'v', }, },
-  { '<leader>wnk', ':<c-u>leftabove new<cr>',         desc = 'window.new up',      mode = { 'n', 'v', }, },
-  { '<leader>wnh', ':<c-u>leftabove vnew<cr>',        desc = 'window.new left',    mode = { 'n', 'v', }, },
-  { '<leader>wnl', ':<c-u>vnew<cr>',                  desc = 'window.new right',   mode = { 'n', 'v', }, },
+  ['<leader>wn'] = { name = 'window.new', },
+  ['<leader>wnj'] = { ':<c-u>new<cr>', 'window.new down', mode = { 'n', 'v', }, },
+  ['<leader>wnk'] = { ':<c-u>leftabove new<cr>', 'window.new up', mode = { 'n', 'v', }, },
+  ['<leader>wnh'] = { ':<c-u>leftabove vnew<cr>', 'window.new left', mode = { 'n', 'v', }, },
+  ['<leader>wnl'] = { ':<c-u>vnew<cr>', 'window.new right', mode = { 'n', 'v', }, },
 }
