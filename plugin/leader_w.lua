@@ -7,6 +7,8 @@ require 'which-key'.register {
   ['<leader>wh'] = { function() vim.cmd 'wincmd h' end, 'window go left', mode = { 'n', 'v', }, },
   ['<leader>wl'] = { function() vim.cmd 'wincmd l' end, 'window go right', mode = { 'n', 'v', }, },
 
+  ['<leader>wp'] = { function() vim.cmd 'wincmd p' end, 'window go back', mode = { 'n', 'v', }, },
+
   ['<leader>wd'] = { function() F.window_delete() end, 'window delete cur', mode = { 'n', 'v', }, },
 
   ['<leader>ws'] = { name = 'window.split', },
