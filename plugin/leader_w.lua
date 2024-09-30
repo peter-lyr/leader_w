@@ -23,6 +23,12 @@ require 'which-key'.register {
   ['<leader>wnh'] = { ':<c-u>leftabove vnew<cr>', 'window.new left', mode = { 'n', 'v', }, },
   ['<leader>wnl'] = { ':<c-u>vnew<cr>', 'window.new right', mode = { 'n', 'v', }, },
 
+  ['<leader>wi'] = { name = 'window.new.tail', },
+  ['<leader>wij'] = { function() F.new_win_ftail_down() end, 'window.new.tail down', mode = { 'n', 'v', }, },
+  ['<leader>wik'] = { function() F.new_win_ftail_up() end, 'window.new.tail up', mode = { 'n', 'v', }, },
+  ['<leader>wih'] = { function() F.new_win_ftail_left() end, 'window.new.tail left', mode = { 'n', 'v', }, },
+  ['<leader>wil'] = { function() F.new_win_ftail_right() end, 'window.new.tail right', mode = { 'n', 'v', }, },
+
   ['<leader>we'] = { '<c-w>=', 'window equal', mode = { 'n', 'v', }, },
   ['<leader>wm'] = { function() F.win_max_height() end, 'window max height', mode = { 'n', 'v', }, },
   ['<leader>w,'] = { function() F.win_max_width() end, 'window max width', mode = { 'n', 'v', }, },
