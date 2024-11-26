@@ -2,6 +2,7 @@ local F = require 'f'
 
 require 'which-key'.register {
   ['<leader>w'] = { name = 'window', },
+  ['<leader>w<leader>'] = { name = 'window.more', },
   ['<leader>wj'] = { function() vim.cmd 'wincmd j' end, 'window go down', mode = { 'n', 'v', }, },
   ['<leader>wk'] = { function() vim.cmd 'wincmd k' end, 'window go up', mode = { 'n', 'v', }, },
   ['<leader>wh'] = { function() vim.cmd 'wincmd h' end, 'window go left', mode = { 'n', 'v', }, },
@@ -39,9 +40,11 @@ require 'which-key'.register {
   ['<leader>wm'] = { function() F.win_max_height() end, 'window max height', mode = { 'n', 'v', }, },
   ['<leader>w,'] = { function() F.win_max_width() end, 'window max width', mode = { 'n', 'v', }, },
 
-  ['<leader>wJ'] = { function() vim.cmd 'wincmd J' end, 'window be most down', mode = { 'n', 'v', }, },
-  ['<leader>wK'] = { function() vim.cmd 'wincmd K' end, 'window be most up', mode = { 'n', 'v', }, },
-  ['<leader>wH'] = { function() vim.cmd 'wincmd H' end, 'window be most left', mode = { 'n', 'v', }, },
-  ['<leader>wL'] = { function() vim.cmd 'wincmd L' end, 'window be most right', mode = { 'n', 'v', }, },
-  ['<leader>wT'] = { function() vim.cmd 'wincmd T' end, 'window be in new tab', mode = { 'n', 'v', }, },
+  ['<leader>w<leader>j'] = { function() vim.cmd 'wincmd J' end, 'window be most down', mode = { 'n', 'v', }, },
+  ['<leader>w<leader>k'] = { function() vim.cmd 'wincmd K' end, 'window be most up', mode = { 'n', 'v', }, },
+  ['<leader>w<leader>h'] = { function() vim.cmd 'wincmd H' end, 'window be most left', mode = { 'n', 'v', }, },
+  ['<leader>w<leader>l'] = { function() vim.cmd 'wincmd L' end, 'window be most right', mode = { 'n', 'v', }, },
+
+  ['<leader>w<leader>t'] = { function() vim.cmd 'wincmd T' end, 'window be in new tab', mode = { 'n', 'v', }, },
+  ['<leader>w<leader>o'] = { function() vim.cmd 'wincmd o' end, 'only cur window', mode = { 'n', 'v', }, },
 }
