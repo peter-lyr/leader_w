@@ -40,6 +40,9 @@ require 'which-key'.register {
   ['<leader>wm'] = { function() F.win_max_height() end, 'window max height', mode = { 'n', 'v', }, },
   ['<leader>w,'] = { function() F.win_max_width() end, 'window max width', mode = { 'n', 'v', }, },
 
+  ['<leader>wb'] = { name = 'window.bw', },
+  ['<leader>wbo'] = { function() F.bw_all_unseen_buffer() end, 'bw_all_unseen_buffer', mode = { 'n', 'v', }, },
+
   ['<leader>w<leader>j'] = { function() vim.cmd 'wincmd J' end, 'window be most down', mode = { 'n', 'v', }, },
   ['<leader>w<leader>k'] = { function() vim.cmd 'wincmd K' end, 'window be most up', mode = { 'n', 'v', }, },
   ['<leader>w<leader>h'] = { function() vim.cmd 'wincmd H' end, 'window be most left', mode = { 'n', 'v', }, },
