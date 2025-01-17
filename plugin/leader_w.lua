@@ -43,7 +43,9 @@ require 'which-key'.register {
   ['<leader>w,'] = { function() F.win_max_width() end, 'window max width', mode = { 'n', 'v', }, },
 
   ['<leader>wb'] = { name = 'window.bw', },
-  ['<leader>wbo'] = { function() F.bw_all_unseen_buffer() end, 'bw_all_unseen_buffer', mode = { 'n', 'v', }, },
+  ['<leader>wba'] = { function() F.bw_all_buffer() end, 'bw_all_buffer', mode = { 'n', 'v', }, },
+  ['<leader>wbu'] = { function() F.bw_all_unseen_buffer() end, 'bw_all_unseen_buffer', mode = { 'n', 'v', }, },
+  ['<leader>wbo'] = { function() F.bw_all_unseen_buffer_other_tab() end, 'bw_all_unseen_buffer_other_tab', mode = { 'n', 'v', }, },
 
   ['<leader>w<leader>j'] = { function() vim.cmd 'wincmd J' end, 'window be most down', mode = { 'n', 'v', }, },
   ['<leader>w<leader>k'] = { function() vim.cmd 'wincmd K' end, 'window be most up', mode = { 'n', 'v', }, },
