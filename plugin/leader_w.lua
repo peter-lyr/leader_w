@@ -55,3 +55,17 @@ require 'which-key'.register {
   ['<leader>w<leader>t'] = { function() vim.cmd 'wincmd T' end, 'window be in new tab', mode = { 'n', 'v', }, },
   ['<leader>w<leader>o'] = { function() vim.cmd 'wincmd o' end, 'only cur window', mode = { 'n', 'v', }, },
 }
+
+require 'which-key'.register {
+  ['<leader>ww'] = { name = 'work', },
+
+  ['<leader>wws'] = { function() F.save_sessions_at_cwd() end, 'save_sessions_at_cwd', mode = { 'n', 'v', }, },
+  ['<leader>wwl'] = { function() F.load_sessions_sel() end, 'load_sessions_sel', mode = { 'n', 'v', }, },
+  ['<leader>ww<leader>l'] = { function() F.reload_sessions_sel() end, 'reload_sessions_sel', mode = { 'n', 'v', }, },
+  ['<leader>wwm'] = { function() F.work_summary_day 'morning' end, 'work_summary_day morning', mode = { 'n', 'v', }, },
+  ['<leader>wwe'] = { function() F.work_summary_day 'evening' end, 'work_summary_day evening', mode = { 'n', 'v', }, },
+  ['<leader>wwp'] = { function() F.work_day_append() end, 'work_day_append', mode = { 'n', 'v', }, },
+  ['<leader>wwk'] = { function() F.work_summary_week() end, 'work_summary_week', mode = { 'n', 'v', }, },
+  ['<leader>wwa'] = { function() F.work_summary_week_all() end, 'work_summary_week_all', mode = { 'n', 'v', }, },
+  ['<leader>wwo'] = { function() F.work_summary_week_one() end, 'work_summary_week_one', mode = { 'n', 'v', }, },
+}
